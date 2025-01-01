@@ -1,5 +1,5 @@
 {
-  "homepage": "https://my-username.github.io/Portfolio",
+  "homepage": "https://RAravinthRaj.github.io/portfolio/",
   "name": "my-project",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
