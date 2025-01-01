@@ -13,7 +13,7 @@ const Projects = () => {
       oneline: "A portal to highlights my skills, projects, and achievements.",
       description:
         " A portfolio is a curated collection of work samples, skills, and accomplishments that demonstrates your expertise, creativity, and professional growth, often tailored to showcase your value in a specific field or industry.",
-      path: "https://github.com/RAravinthRaj/pg-life",
+      path: "https://github.com/RAravinthRaj/Portfolio",
     },
     {
       image:
