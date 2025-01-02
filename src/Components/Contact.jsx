@@ -63,24 +63,28 @@ const Contact = () => {
                 <Link
                   to="https://www.linkedin.com/in/aravinth-raj-r-868963288/"
                   className="hover:scale-150 hover:transition-transform hover:duration-200"
+                   target="_blank"
                 >
                   <AiFillLinkedin size={25} />
                 </Link>
                 <Link
                   to=""
                   className="hover:scale-150 hover:transition-transform hover:duration-200"
+                   target="_blank"
                 >
                   <FaSquareInstagram size={25} />
                 </Link>
                 <Link
                   to=""
                   className="hover:scale-150 hover:transition-transform hover:duration-200"
+                   target="_blank"
                 >
                   <FaTwitter size={25} />
                 </Link>
                 <Link
                   to=""
                   className="hover:scale-150 hover:transition-transform hover:duration-200"
+                   target="_blank"
                 >
                   <FaFacebookF size={25} />
                 </Link>
