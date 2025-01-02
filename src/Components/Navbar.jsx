@@ -1,6 +1,5 @@
 import React from "react";
-import logo from "../images/logo.jpg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { BiSolidQuoteLeft } from "react-icons/bi";
 import { IoEarth } from "react-icons/io5";
@@ -17,50 +16,84 @@ const Navbar = () => {
     <div className="mb-5">
       <nav className="flex p-2 mx-2 md:mx-5 lg:mx-5 items-center">
         <div className="flex-1">
-          <Link to="/">
+          <NavLink to="/" activeClassName="active" exact>
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkFK-lENW3YS4W8P8Hn5TTCYSytMbJbdOskw&s"
               className="h-12 w-12 rounded-full hover:border-2 hover:shadow-[0_0_5px_white]"
             />
-          </Link>
+          </NavLink>
         </div>
         <div className="md:flex-1 items-center justify-between">
           <ul className="hidden md:flex mt-2 justify-between space-x-4 text-sm">
             <li className="flex text-slate-100 items-center gap-2 hover:text-white hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <FaHome />
-              <Link className="text-white no-underline" to="/">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white  font-bold" : "no-underline text-white "
+                }
+                exact
+                to="/"
+              >
                 HOME
-              </Link>
+              </NavLink>
             </li>
             <li className="flex  text-slate-100 items-center  gap-2  hover:text-white    hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <BiSolidQuoteLeft />
-              <Link className="text-white no-underline" to="/about">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white  font-bold" : "no-underline text-white "
+                }
+                to="/about"
+              >
                 ABOUT
-              </Link>
+              </NavLink>
             </li>
             <li className="flex  text-slate-100 items-center  gap-2   hover:text-white    hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <IoEarth />
-              <Link className="text-white no-underline" to="/service">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white  font-bold" : "no-underline text-white "
+                }
+                to="/service"
+              >
                 SKILLS
-              </Link>
+              </NavLink>
             </li>
             <li className="flex  text-slate-100 items-center  gap-2   hover:text-white   hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <AiOutlinePicture />
-              <Link className="text-white no-underline" to="/project">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white  font-bold" : "no-underline text-white "
+                }
+                exact
+                to="/project"
+              >
                 PROJECT
-              </Link>
+              </NavLink>
             </li>
             <li className="flex  text-slate-100 items-center  gap-2   hover:text-white   hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <GrBlog />
-              <Link className="text-white no-underline" to="/blog">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white  font-bold" : "no-underline text-white "
+                }
+                exact
+                to="/blog"
+              >
                 BLOG
-              </Link>
+              </NavLink>
             </li>
             <li className="flex  text-slate-100 items-center  gap-2   hover:text-white   hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <IoMdMail />
-              <Link className="text-white no-underline" to="/contact">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white  font-bold" : "no-underline text-white "
+                }
+                exact
+                to="/contact"
+              >
                 CONTACT
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <button
@@ -76,39 +109,75 @@ const Navbar = () => {
           <ul className="flex flex-col items-baseline place-items-end text-center space-y-3 text-md">
             <li className="flex gap-2  text-slate-100 hover:text-white  hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <FaHome />
-              <Link className="text-white no-underline" to="/">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white font-bold" : "no-underline text-white "
+                }
+                exact
+                to="/"
+              >
                 HOME
-              </Link>
+              </NavLink>
             </li>
             <li className="flex gap-2  text-slate-100  hover:text-white  hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <BiSolidQuoteLeft />
-              <Link className="text-white no-underline" to="/about">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white font-bold" : "no-underline text-white "
+                }
+                exact
+                to="/about"
+              >
                 ABOUT
-              </Link>
+              </NavLink>
             </li>
             <li className="flex gap-2   text-slate-100 hover:text-white   hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <IoEarth />
-              <Link className="text-white no-underline" to="/service">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white font-bold" : "no-underline text-white "
+                }
+                exact
+                to="/service"
+              >
                 SKILLS
-              </Link>
+              </NavLink>
             </li>
             <li className="flex gap-2  text-slate-100 hover:text-white    hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <AiOutlinePicture />
-              <Link className="text-white no-underline" to="/project">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white font-bold" : "no-underline text-white "
+                }
+                exact
+                to="/project"
+              >
                 PROJECT
-              </Link>
+              </NavLink>
             </li>
             <li className="flex gap-2   text-slate-100 hover:text-white   hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <GrBlog />
-              <Link className="text-white no-underline" to="/blog">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white font-bold" : "no-underline text-white "
+                }
+                exact
+                to="/blog"
+              >
                 BLOG
-              </Link>
+              </NavLink>
             </li>
             <li className="flex gap-2   text-slate-100 hover:text-white  hover:font-bold relative after:content after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
               <IoMdMail />
-              <Link className="text-white no-underline" to="/contact">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "underline underline-offset-4 decoration-2 text-white  font-bold" : "no-underline text-white "
+                }
+                exact
+                to="/contact"
+              >
                 CONTACT
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
