@@ -11,6 +11,7 @@ const SkillsButton = () => {
           <Link
             className="text-white font-bold underline underline-offset-8 hover:scale-110 hover:transition-transform hover:duration-200"
             to="/service"
+            target="_blank"
           >
             my skills
           </Link>

@@ -19,7 +19,7 @@ const ProjectCard = (props) => {
           <p>{props.dese}</p>
         </div>
         <div className="flex flex-col items-center m-3">
-          <Link to={props.li} className="text-white">
+          <Link to={props.li} className="text-white" target="_blank">
             <button className="border font-xl gap-2 py-3 px-10 md:px-20 lg:px-40 shadow-[0_0_5px_white] font-semibold rounded-full  hover:transition-shadow duration-150 hover:shadow-[0_0_15px_white] hover:scale-110 hover:bg-slate-500 hover:text-black">
               Check Code
             </button>
