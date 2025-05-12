@@ -47,7 +47,7 @@ const Project = () => {
           </Link>
         </div>
         <div>
-          <Link className="text-white font-bold no-underline underline-offset-8" to='/'  target="_blank">
+          <Link className="text-white font-bold no-underline underline-offset-8" to='https://drive.google.com/file/d/1ZjM6oGmI8tm3p_PyRjm0VeOzng5x6X2E/view?usp=drive_link'  target="_blank">
             <button
               onClick={handleDownload}
               className="border flex items-center gap-2 py-3 px-4 lg:px-12 shadow-[0_0_5px_white] font-semibold rounded-lg  hover:shadow-[0_0_15px_white] hover:scale-110 hover:transition-shadow duration-150 hover:bg-slate-500 hover:text-black"
